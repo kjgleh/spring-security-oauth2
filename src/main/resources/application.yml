@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: oauth2
+  datasource:
+    url: jdbc:mysql://localhost:53306/spring_security_oauth2
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: xxx
+            client-secret: xxx
+            scope: profile,email
+
